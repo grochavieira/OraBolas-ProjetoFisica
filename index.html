@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Oras Bolas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/canvasStyle.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="essencial.js"></script>
+</head>
+<body>
+
+  <div id="menu">
+		<div class="hamburger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
+		<div class="menu-inner">
+
+			<ul>
+				<li ><a href="#" onclick="Envia();Mudarestado('myDiv1');">Distância</a></li>
+				<li ><a href="#" onclick="Envia();Mudarestado('myDiv2');">Trajetória - Robô</a></li>
+				<li ><a href="#" onclick="Envia();Mudarestado('myDiv3');">Trajetória - Bola</a></li>
+				<li ><a href="#" onclick="Envia();Mudarestado('myDiv10');">Trajetória - Interceptação</a></li>
+				<li ><a href="#" onclick="Envia();Mudarestado('myDiv4');">Posição - Robô (x) e (y)</a></li>
+				<li ><a href="#" onclick="Envia();Mudarestado('myDiv5');">Posição - Bola (x) e (y)</a></li>
+				<li ><a href="#" onclick="Envia();Mudarestado('myDiv6');">Velocidade - Robô (x) e (y)</a></li>
+				<li ><a href="#" onclick="Envia();Mudarestado('myDiv7');">Velocidade - Bola (x) e (y)</a></li>
+				<li ><a href="#" onclick="Envia();Mudarestado('myDiv8');">Aceleração - Robô(x) e (y)</a></li>
+				<li ><a href="#" onclick="Envia();Mudarestado('myDiv9');">Aceleração - Bola(x) e (y)</a></li>
+        
+			</ul>
+		</div>
+
+
+		<svg version="1.1" id="blob" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<path id="blob-path" d="M60,500H0V0h60c0,0,20,172,20,250S60,900,60,500z"/>
+		</svg>
+	</div>
+
+  <center id="overME">
+  		<div id="cabeca">
+        <p id="grande">Projeto - Ora, Bolas!</p><br>
+      <p id="medio" style="display: inline;">Digite a posição X do robô: </p>
+      <input id="txtRoboX" class="inp" type="text">
+      <br> <br>
+      <p id="medio" style="display: inline;">Digite a posição Y do robô: </p>
+      <input id="txtRoboY" class="inp" type="text">
+      <br><br><br>
+  			</div>
+
+
+  <div id="tol" style="width: 795px; height: 340px;">
+  
+   <div id="myDiv1"  class="hidden"style="width: 795px; height: 340px;"></div>
+   <div id="myDiv2" class="hidden" style="width: 795px; height: 340px;"></div>
+   <div id="myDiv3" class="hidden" style="width: 795px; height: 340px;"></div>
+   <div id="myDiv4" class="hidden" style="width: 795px; height: 340px;"></div>
+   <div id="myDiv5" class="hidden" style="width: 795px; height: 340px;"></div>
+   <div id="myDiv6" class="hidden" style="width: 795px; height: 340px;"></div>
+   <div id="myDiv7" class="hidden" style="width: 795px; height: 340px;"></div>
+   <div id="myDiv8" class="hidden" style="width: 795px; height: 340px;"></div>
+   <div id="myDiv9" class="hidden" style="width: 795px; height: 340px;"></div>
+   <div id="myDiv10" class="hidden" style="width: 795px; height: 340px;"></div>
+
+  </div>
+
+   <br><br><br>
+   <canvas id="myCanvas" width="200px" height="100px"></canvas>
+
+
+  </center>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
